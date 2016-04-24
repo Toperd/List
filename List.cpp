@@ -208,9 +208,10 @@ public:
 		}
 	}
 };
-List<int>* get_init(int data) //
+template<typename T>
+List* get_init(T def, T data) //
 {
-	List<int>* tmp = new List<int>(0, data, false);
+	List* tmp = new List(def, data, false);
 	return tmp;
 }
 /*bool criterion(int* first, int* second)

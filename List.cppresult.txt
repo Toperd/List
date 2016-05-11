@@ -1,33 +1,6 @@
-In file included from cur.cpp:13:0:
-antonov/List.cpp:212:1: error: invalid use of template-name 'List' without an argument list
- List* get_init() //
- ^
-cur.cpp: In member function 'virtual void ListTest_ListLen_Test::TestBody()':
-cur.cpp:19:39: error: 'get_init' was not declared in this scope
-     AbstractList<string>*l = get_init();
-                                       ^
-cur.cpp: In member function 'virtual void ListTest_DeleteOne_Test::TestBody()':
-cur.cpp:26:40: error: 'get_init' was not declared in this scope
-     AbstractList<string> *l = get_init();
-                                        ^
-cur.cpp: In member function 'virtual void ListTest_AddOne_Test::TestBody()':
-cur.cpp:34:40: error: 'get_init' was not declared in this scope
-     AbstractList<string> *l = get_init();
-                                        ^
-cur.cpp: In member function 'virtual void ListTest_AddAndCheckOne_Test::TestBody()':
-cur.cpp:43:40: error: 'get_init' was not declared in this scope
-     AbstractList<string> *l = get_init();
-                                        ^
-cur.cpp: In member function 'virtual void ListTest_PopOne_Test::TestBody()':
-cur.cpp:51:40: error: 'get_init' was not declared in this scope
-     AbstractList<string> *l = get_init();
-                                        ^
-cur.cpp: In member function 'virtual void ListTest_PushPop_Test::TestBody()':
-cur.cpp:83:40: error: 'get_init' was not declared in this scope
-     AbstractList<string> *l = get_init();
-                                        ^
-cur.cpp: In member function 'virtual void ListTest_PushPop1E3_Test::TestBody()':
-cur.cpp:112:38: error: 'get_init' was not declared in this scope
-   AbstractList<string> *l = get_init();
-                                      ^
-./check.sh: line 24: ./a.out: No such file or directory
+[==========] Running 7 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 7 tests from ListTest
+[ RUN      ] ListTest.ListLen
+[       OK ] ListTest.ListLen
+[ RUN      ] ListTest.DeleteOne

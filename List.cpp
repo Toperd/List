@@ -24,8 +24,8 @@ protected:
 public:
 	virtual void sort(bool (*f)(T* first, T* second)) = 0;
 	virtual T get(int index) = 0;
-	virtual void set(int index, T data) = 0;	//устанавливает значение в элемент index
-	virtual void insert(int index, T data) = 0;	//добавляет элемент перед элементом index
+	virtual void set(int index, T data) = 0;	//ГіГ±ГІГ Г­Г ГўГ«ГЁГўГ ГҐГІ Г§Г­Г Г·ГҐГ­ГЁГҐ Гў ГЅГ«ГҐГ¬ГҐГ­ГІ index
+	virtual void insert(int index, T data) = 0;	//Г¤Г®ГЎГ ГўГ«ГїГҐГІ ГЅГ«ГҐГ¬ГҐГ­ГІ ГЇГҐГ°ГҐГ¤ ГЅГ«ГҐГ¬ГҐГ­ГІГ®Г¬ index
 	virtual T remove(int index) = 0;
 	virtual int len() = 0;
 	virtual bool empty()
@@ -208,8 +208,8 @@ public:
 		}
 	}
 };
-template<typename T>
-List* get_init() //
+
+List<string>* get_init() //
 {
 	List<string>* tmp = new List<string>("Empty", "1", true);
 	return tmp;

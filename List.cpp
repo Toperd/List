@@ -164,25 +164,32 @@ public:
 	}
 	T remove(int index)
 	{
-		if(index < 0)
+		if(this->len() == 0)
 		{
-			index = 0;
+			return this->data;
 		}
-		if(index > this->len() - 1)
+		else
 		{
-			index = this->len() - 1;
+			if(index < 0)
+			{
+				index = 0;
+			}
+			if(index > this->len() - 1)
+			{
+				index = this->len() - 1;
+			}
+			List* now = this->next;
+			List* prev = this;
+			for(int i = 0; i < index; i++)
+			{
+				prev = now;
+				now = now->next;
+			}
+			T tmp = now->data;
+			prev->next = now->next;
+			delete now;
+			return tmp;
 		}
-		List* now = this->next;
-		List* prev = this;
-		for(int i = 0; i < index; i++)
-		{
-			prev = now;
-			now = now->next;
-		}
-		T tmp = now->data;
-		prev->next = now->next;
-		delete now;
-		return tmp;
 	}
 	void swap_(int first, int second)
 	{
@@ -190,7 +197,7 @@ public:
 		this->set(first, this->get(second));
 		this->set(second, tmp);
 	}
-	void sort (bool (*f)(T* first, T* second))
+	void sort(bool (*f)(T* first, T* second))
 	{
 		T a;
 		T b;
